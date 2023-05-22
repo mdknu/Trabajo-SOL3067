@@ -1,0 +1,10 @@
+---
+title: "Trabajo 1"
+subtitle: "Modelo de Ecuaciones Estructurales (SOL3067) "
+author: "Deneken & Díaz"
+#date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+
+¿A qué punto las diferencias pueden ser por cuestioens de autoidentificación? ¿Ó como están redactadas las preguntas?
