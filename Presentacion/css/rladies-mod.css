@@ -1,0 +1,93 @@
+/*
+CSS originally developed by Alison Hill for the xaringan R-Ladies theme
+https://alison.rbind.io/project/rladies-xaringan/
+https://github.com/yihui/xaringan/tree/master/inst/rmarkdown/templates/xaringan/resources
+
+This CSS has been adapted by:
+Silvia Canelón (https://silvia.rbind.io)
+
+The primary modifications are:
+1. adding text underlining for links and removing the underline upon hovering (a and a > code)
+2. adding a black background color to the horizontal bar
+3. increasing prose font size (.remark-slide-content)
+4. increasing code font size (pre code)
+5. changing code highlight color (.remark-code-line-highlighted)
+6. additional commenting
+*/
+
+/*----------------------------------------------------------------------------*/
+
+/*
+Some notes on font size units:
+
+rem is a relevant font size unit, it stands for "relative to the 'root' em-dash", and it's 16px by default on (all?) HTML pages.
+em is another relevant font size unit, it's relative to the em-dash, and it's relative to the container it's in.
+Reading resource: https://css-tricks.com/rems-ems/
+
+*/
+
+
+/*-- Headings --*/
+h1, h2, h3 {
+  font-weight: normal;
+  color: #7597eb;
+}
+
+/*-- Links/anchors --*/
+a, a > code {
+  color: #39488a;
+  text-decoration: underline 2px;
+  line-height: 2rem;
+}
+
+/*-- Links/anchors upon hovering --*/
+a:hover { text-decoration: none;}
+
+/*-- Horizontal bar --*/
+hr {background-color: black;}
+
+/*-- Prose Text --------*/
+/* controls size of prose text but not headings */
+
+.remark-slide-content {
+  font-size:          1.25em;
+}
+
+/*-- Inline code --*/
+/* 1rem = 16px, 1em = 20px, em here means it depends on the size of .remark-slide-content (above). For example, using 0.8em or 80% instead would make the text 80% as large as the .remark-slide-content text size (1.25em above) */
+
+.remark-code, .remark-inline-code {
+  font-family: 'Inconsolata', 'Lucida Console', Monaco, monospace;
+  font-size:          1em;
+  color: #7597eb;
+}
+
+/*-- Code chunk --*/
+/* 1rem or 1em = 16px, it seems !important is necessary here */
+pre code {
+  font-size: 18px !important;
+}
+
+/*-- Line highlighting within code chunk --*/
+.remark-code-line-highlighted {
+  background-color: rgba(204, 189, 204, 0.6);
+}
+
+/*-- Inverse slides --*/
+.inverse {
+  background-color: #407de6;
+}
+
+.inverse, .inverse h1, .inverse h2, .inverse h3, .inverse a, inverse a > code {
+  color: #fff;
+}
+
+.inverse a {
+  color: #fff;
+  text-decoration: underline 2px;
+}
+
+.inverse a:hover { text-decoration: none;}
+
+/*-- Hides slide number from title slide --*/
+.title-slide .remark-slide-number { display: none; }
